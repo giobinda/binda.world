@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giovanni Binda — Projects</title>
+  <meta name="description" content="Software by Giovanni Binda: open-source BI, Android apps, Linux tools. Built for problems I actually had.">
+  <link rel="canonical" href="https://binda.world/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Giovanni Binda — Projects">
+  <meta property="og:description" content="Software built for problems I actually had. Other people seem to have them too.">
+  <meta property="og:url" content="https://binda.world/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to the projects</a>
+
+  <header class="top">
+    <a class="wordmark" href="/">binda<span>.world</span></a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="https://github.com/giobinda">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Giovanni Binda · software, mostly</p>
+      <h1 id="hero-title">I build software for problems I personally ran&nbsp;into.</h1>
+      <p class="lede">Turns out other people have them too, which is either reassuring or worrying.
+        Below: business intelligence, two Android apps, and a few Linux tools that exist because
+        something else refused to cooperate.</p>
+      <dl class="stats" aria-label="At a glance">
+        <div><dt>Projects</dt><dd>6</dd></div>
+        <div><dt>Languages</dt><dd>Rust, Kotlin, Python</dd></div>
+        <div><dt>Cookies on this page</dt><dd>0</dd></div>
+        <div><dt>Personality</dt><dd>Scheduled for a later release</dd></div>
+      </dl>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">Projects</h2>
+        <p>Roughly ordered by how much of my sleep they consumed.</p>
+      </div>
+
+      <ol class="list">
+
+        <li class="project">
+          <div class="num" aria-hidden="true">01</div>
+          <div class="body">
+            <div class="title-row">
+              <h3>Magnum BI</h3>
+              <span class="status status--alpha">Early alpha · pin a version</span>
+            </div>
+            <p class="kind">Open-source business intelligence · Rust</p>
+            <p class="desc">Dashboards a whole company can use: fast, simple, and safe to share between
+              teams and customers. One installation serves many organisations, each with its own people,
+              data and look, and nothing leaks from one to another.</p>
+            <p class="why"><span>Exists because</span> dashboards shouldn't require a procurement process and three consultants.</p>
+            <ul class="facts">
+              <li>A single Rust server; the database does the heavy lifting</li>
+              <li>PostgreSQL, BigQuery, Parquet/CSV/Iceberg via DuckDB</li>
+              <li>Multi-tenant, row filters that only ever narrow</li>
+              <li>Passkeys, SSO, and guest links that expire</li>
+            </ul>
+            <p class="links">
+              <a href="https://giobinda.github.io/magnumbi/">Website</a>
+              <a href="https://github.com/giobinda/magnumbi">Source</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="num" aria-hidden="true">02</div>
+          <div class="body">
+            <div class="title-row">
+              <h3>EthiCook</h3>
+              <span class="status status--live">On Google Play</span>
+            </div>
+            <p class="kind">Android app · Kotlin</p>
+            <p class="desc">Scans barcodes and printed expiry dates in one go, reminds you before food
+              goes off, and turns what's already in the cupboard into recipes. Private, mostly offline.</p>
+            <p class="why"><span>Exists because</span> the back of the fridge is where groceries go to become compost.</p>
+            <ul class="facts">
+              <li>200 recipes built in, ranked by what you have</li>
+              <li>Nine languages</li>
+              <li>Free. No ads, no subscriptions, no “premium”</li>
+              <li>Contributes back to Open Food Facts, if you like</li>
+            </ul>
+            <p class="links">
+              <a href="https://ethicook.app/">Website</a>
+              <a href="https://play.google.com/store/apps/details?id=com.ethicook.app">Google Play</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="num" aria-hidden="true">03</div>
+          <div class="body">
+            <div class="title-row">
+              <h3>Drum Trainer &amp; Metronome</h3>
+              <span class="status status--soon">Coming soon to Google Play</span>
+            </div>
+            <p class="kind">Android app · Kotlin</p>
+            <p class="desc">A metronome that listens. A timing coach hears whether you're early or late,
+              through the microphone or exactly over USB from an e-drum, with 26 step-by-step lessons
+              from the first beat to full grooves.</p>
+            <p class="why"><span>Exists because</span> I'm a beginner drummer, and the metronome never told me <em>how</em> wrong I was.</p>
+            <ul class="facts">
+              <li>Real notation, every common time signature</li>
+              <li>Per-limb practice; per-pad timing on e-drums</li>
+              <li>English and German</li>
+            </ul>
+            <p class="links">
+              <a href="https://giobinda.github.io/drum-trainer/">Website</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="num" aria-hidden="true">04</div>
+          <div class="body">
+            <div class="title-row">
+              <h3>Attaché</h3>
+              <span class="status status--beta">Beta · not independently audited</span>
+            </div>
+            <p class="kind">Linux privacy tool · Rust</p>
+            <p class="desc">An encrypted folder that asks <em>which program</em> may open your files.
+              Every access gets an Allow&nbsp;once / Always&nbsp;allow / Deny prompt, keyed on the
+              calling binary. The vault locks itself when idle, at logout and before suspend.</p>
+            <p class="why"><span>Exists because</span> a lock is nice, but a bouncer checks names.</p>
+            <ul class="facts">
+              <li>Built on gocryptfs</li>
+              <li>Per-binary whitelist travels inside the vault</li>
+              <li>Exports to disc with the tools to open it</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/giobinda/attache">Source</a>
+              <a href="https://github.com/giobinda/attache/releases/latest">Releases</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="num" aria-hidden="true">05</div>
+          <div class="body">
+            <div class="title-row">
+              <h3>Inkswitch</h3>
+              <span class="status status--beta">Tested on exactly one tablet</span>
+            </div>
+            <p class="kind">Linux driver &amp; settings app · Rust</p>
+            <p class="desc">A replacement driver for XP-Pen drawing tablets, with profiles that switch by
+              themselves depending on which application is in front: Krita, GIMP, Blender, anything.</p>
+            <p class="why"><span>Exists because</span> the vendor driver and I had creative differences.</p>
+            <ul class="facts">
+              <li>Express keys, dial and pen buttons, per application</li>
+              <li>Pressure curves, presets, a key finder</li>
+              <li>AppImage and Flatpak; KDE Plasma 6 on Wayland</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/giobinda/inkswitch">Source</a>
+              <a href="https://github.com/giobinda/inkswitch/releases/latest">Download</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="num" aria-hidden="true">06</div>
+          <div class="body">
+            <div class="title-row">
+              <h3>exfat-grow</h3>
+              <span class="status status--alpha">0.1.0 · back up first</span>
+            </div>
+            <p class="kind">Linux disk utility · Python</p>
+            <p class="desc">Grows an exFAT filesystem in place, without reformatting and without copying
+              your data elsewhere first. A wizard asks before every step that writes anything.</p>
+            <p class="why"><span>Exists because</span> exfatprogs, parted and GParted all politely declined.</p>
+            <ul class="facts">
+              <li>Single file, standard library only</li>
+              <li>Field-tested: 466&nbsp;GiB → 954&nbsp;GiB, data intact</li>
+            </ul>
+            <p class="links">
+              <a href="https://github.com/giobinda/exfat-grow">Source</a>
+            </p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© 2026 Giovanni Binda. Hand-written HTML, no framework, no tracking.</p>
+    <p class="fine">If something here is broken, it's a feature in early alpha.</p>
+  </footer>
+</body>
+</html>
