@@ -9,6 +9,7 @@
   --soon: #2a5bb8;
   --beta: #9a6a00;
   --alpha: #b0391a;
+  --lab: #6b4fa8;
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, ui-serif, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -30,6 +31,7 @@
     --soon: #7ea6f2;
     --beta: #e0b046;
     --alpha: #ff8a66;
+    --lab: #b49af0;
   }
 }
 
@@ -152,6 +154,7 @@ a:hover { color: var(--accent); }
 .status--soon  { --c: var(--soon); }
 .status--beta  { --c: var(--beta); }
 .status--alpha { --c: var(--alpha); }
+.status--lab   { --c: var(--lab); }
 
 .kind {
   font-family: var(--mono); font-size: .8125rem; color: var(--ink-2);
@@ -202,3 +205,6 @@ a:hover { color: var(--accent); }
 .notfound { max-width: var(--measure); margin: 0 auto; padding: clamp(4rem, 14vw, 9rem) var(--gutter); }
 .notfound h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.05; margin: 0; max-width: 16ch; }
 .notfound p { color: var(--ink-2); max-width: 36rem; }
+
+code { font-family: var(--mono); font-size: .875em; background: var(--paper-2); padding: .1em .35em; border-radius: 3px; }
+.links--none { font-weight: 400; color: var(--ink-2); font-style: italic; }
