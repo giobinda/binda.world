@@ -246,3 +246,33 @@ a:hover { color: var(--accent); }
 
 code { font-family: var(--mono); font-size: .875em; background: var(--paper-2); padding: .1em .35em; border-radius: 3px; }
 .links--none { font-weight: 400; color: var(--ink-2); font-style: italic; }
+
+/* ---------- screenshots ---------- */
+.shots {
+  display: grid; gap: clamp(.5rem, 1.5vw, 1rem);
+  margin: 1.5rem 0 0; max-width: 46rem;
+}
+.shots a { display: block; text-decoration: none; }
+.shots img { display: block; width: 100%; height: auto; }
+
+.shots--phone { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 36rem; }
+.shots--phone img {
+  border-radius: 10px; border: 1px solid var(--rule);
+  box-shadow: 0 1px 0 var(--rule), 0 8px 24px -16px rgb(0 0 0 / .35);
+}
+
+.shots--screen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.shots--screen img {
+  border-radius: 6px; border: 1px solid var(--rule); background: #fff;
+  box-shadow: 0 8px 24px -16px rgb(0 0 0 / .35);
+}
+
+/* window captures already carry their own shadow and transparent margin */
+.shots--window { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; max-width: 40rem; }
+
+.shots a:hover img { border-color: var(--accent); }
+
+@media (max-width: 720px) {
+  .shots--screen, .shots--window { grid-template-columns: 1fr; }
+  .shots--window { max-width: 26rem; }
+}
