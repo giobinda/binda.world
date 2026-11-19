@@ -270,6 +270,14 @@ code { font-family: var(--mono); font-size: .875em; background: var(--paper-2); 
 /* window captures already carry their own shadow and transparent margin */
 .shots--window { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; max-width: 40rem; }
 
+/* one 1x capture, shown at native size at most */
+.shots--single { grid-template-columns: auto; justify-content: start; }
+.shots--single img {
+  width: auto; max-width: 100%;
+  border-radius: 6px; border: 1px solid var(--rule);
+  box-shadow: 0 8px 24px -16px rgb(0 0 0 / .35);
+}
+
 .shots a:hover img { border-color: var(--accent); }
 
 @media (max-width: 720px) {
