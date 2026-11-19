@@ -164,7 +164,7 @@ a:hover { color: var(--accent); }
 }
 
 .stats {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 3rem 0 0;
   background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius);
   box-shadow: var(--shadow); overflow: hidden;
@@ -179,8 +179,7 @@ a:hover { color: var(--accent); }
 
 @media (max-width: 720px) {
   .stats { grid-template-columns: 1fr 1fr; }
-  .stats div:nth-child(3) { border-left: 0; }
-  .stats div:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  .stats div:nth-child(3) { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--rule); }
 }
 
 .hero {
