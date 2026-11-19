@@ -234,20 +234,33 @@
           <div class="body">
             <div class="title-row">
               <h3>Grilled Phish</h3>
-              <span class="status status--lab">In the lab · not released</span>
+              <span class="status status--beta">Beta · open source</span>
             </div>
             <p class="kind">Browser extension · JavaScript</p>
             <p class="desc">Catches look-alike scam links, like <code>paypa1.com</code>, a Cyrillic
               <code>pаypal.com</code> or <code>paypal.com.secure-verify.xyz</code>. They get a red box,
-              they don't open when clicked, and the warning highlights exactly which letter is lying to you.</p>
+              they don't open when clicked, and the warning highlights exactly which letter is lying to you.
+              Fakes opened from a bookmark, an email or the address bar are stopped before the page even
+              loads, and a typo one keystroke from a well-known site gets a polite “Did you mean github.com?”</p>
             <p class="why"><span>Exists because</span> I'm getting old, and a big red flag over a scam link is less expensive than new glasses.</p>
             <ul class="facts">
               <li>All look-alike checks run on your computer</li>
               <li>Recognises copies of the 100,000 most visited sites</li>
               <li>Blocks websites registered in the last few days</li>
-              <li>Chrome, Edge, Brave and Firefox</li>
+              <li>Signed list updates, so nobody can sneak a fake in</li>
+              <li>12 languages, plus a built-in guide to spotting scams</li>
+              <li>Will never contact you, and says so in all 12 languages</li>
+              <li>Chrome, Edge, Brave and Firefox (installed by hand, for now)</li>
+              <li>Free software, GPL-3.0</li>
             </ul>
-            <p class="links links--none">No link yet. It's still on the grill.</p>
+            <div class="shots shots--trio">
+                <a href="assets/shots/grilled-phish/warning.webp"><img src="assets/shots/grilled-phish/warning.webp" alt="Grilled Phish red bar over a fake PayPal login: this website is NOT PayPal, with Why? and Leave this site buttons" width="1134" height="714" loading="lazy" decoding="async"></a>
+                <a href="assets/shots/grilled-phish/links.webp"><img src="assets/shots/grilled-phish/links.webp" alt="Demo page: look-alike links boxed in red and marked Fake site, blocked, while the real ones stay normal" width="876" height="775" loading="lazy" decoding="async"></a>
+                <a href="assets/shots/grilled-phish/guide.webp"><img src="assets/shots/grilled-phish/guide.webp" alt="Grilled Phish guide: How to spot a scam website, a five-minute read with a language picker" width="829" height="669" loading="lazy" decoding="async"></a>
+            </div>
+            <p class="links">
+              <a href="https://github.com/giobinda/grilled-phish">Source</a>
+            </p>
           </div>
         </li>
 
