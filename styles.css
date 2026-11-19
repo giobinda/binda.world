@@ -302,7 +302,8 @@ a:hover { color: var(--accent); }
 
 .why {
   margin: 1rem 0 0;
-  font-family: var(--serif); font-style: italic; font-size: 1.3125rem; line-height: 1.3;
+  font-family: var(--sans); font-size: 1.0625rem; font-weight: 500; line-height: 1.45;
+  letter-spacing: -.01em; color: var(--ink);
   padding: .75rem 1rem; border-radius: 10px;
   background: color-mix(in srgb, var(--accent) 7%, transparent);
   border-left: 2px solid var(--accent);
@@ -310,7 +311,7 @@ a:hover { color: var(--accent); }
 .why span {
   font-family: var(--mono); font-style: normal; font-size: .6875rem;
   text-transform: uppercase; letter-spacing: .08em; color: var(--accent);
-  display: block; margin-bottom: .125rem;
+  display: block; margin-bottom: .25rem; font-weight: 500;
 }
 
 .facts {
